@@ -1,0 +1,184 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>【CCSP】入门模拟Ⅰ：简单模拟 | A_ROOKIE</title>
+<link rel="shortcut icon" href="https://szlllll.github.io/A_ROOKIE//favicon.ico?v=1671033023547">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://szlllll.github.io/A_ROOKIE//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="【CCSP】入门模拟Ⅰ：简单模拟 | A_ROOKIE - Atom Feed" href="https://szlllll.github.io/A_ROOKIE//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="BG：打算参加一下明年三月份的CCSP&amp;四月份的蓝桥杯，在准备毕设的同时刷些代码题。以及依旧是从简单的题目开始搞起，那个找一点自信。 😏
+1、卡拉兹猜想
+对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 ..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://szlllll.github.io/A_ROOKIE/">
+  <img class="avatar" src="https://szlllll.github.io/A_ROOKIE//images/avatar.png?v=1671033023547" alt="">
+  </a>
+  <h1 class="site-title">
+    A_ROOKIE
+  </h1>
+  <p class="site-description">
+    A ROOKIE's Learning Process
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://szlllll.github.io/A_ROOKIE/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://szlllll.github.io/A_ROOKIE/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              【CCSP】入门模拟Ⅰ：简单模拟
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-12-14
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>BG：打算参加一下明年三月份的CCSP&amp;四月份的蓝桥杯，在准备毕设的同时刷些代码题。以及依旧是从简单的题目开始搞起，<s>那个找一点自信。</s> 😏</p>
+<h2 id="1-卡拉兹猜想">1、卡拉兹猜想</h2>
+<p>对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
+<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 n，简单地数一下，需要多少步（砍几下）才能得到 n=1？</p>
+<pre><code class="language-python">n = int(input())
+cnt = 0
+while n != 1:
+    cnt += 1
+    if n % 2 == 0:
+        n = n // 2
+        continue
+    else:
+        n = (3*n+1)//2
+print(cnt)
+</code></pre>
+<h3 id="改进">改进</h3>
+<p>整除2可用移位来做提高时间效率 n = n &gt;&gt; 2</p>
+<h2 id=""></h2>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E5%8D%A1%E6%8B%89%E5%85%B9%E7%8C%9C%E6%83%B3">1、卡拉兹猜想</a>
+<ul>
+<li><a href="#%E6%94%B9%E8%BF%9B">改进</a></li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://szlllll.github.io/A_ROOKIE/post/python-standard-library-re-learning/">
+              <h3 class="post-title">
+                Python Standard Library &#39;re&#39; Learning
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://szlllll.github.io/A_ROOKIE//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

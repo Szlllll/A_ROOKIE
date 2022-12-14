@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Introduction | A_ROOKIE</title>
+<link rel="shortcut icon" href="https://szlllll.github.io/A_ROOKIE//favicon.ico?v=1671033023547">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://szlllll.github.io/A_ROOKIE//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Introduction | A_ROOKIE - Atom Feed" href="https://szlllll.github.io/A_ROOKIE//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="👏可喜可贺，可喜可贺👏
+
+本人的小站开通了，感谢github爸爸提供了这么好用的部署，AND Gridea这么好用的开发工具，就是说咱一个随便搞搞，qcing（剑刃出鞘声）的一下，很快啊，网站就这么搭建好了。
+
+Markdown还不怎么..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://szlllll.github.io/A_ROOKIE/">
+  <img class="avatar" src="https://szlllll.github.io/A_ROOKIE//images/avatar.png?v=1671033023547" alt="">
+  </a>
+  <h1 class="site-title">
+    A_ROOKIE
+  </h1>
+  <p class="site-description">
+    A ROOKIE's Learning Process
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://szlllll.github.io/A_ROOKIE/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://szlllll.github.io/A_ROOKIE/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Introduction
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-12-02
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h2 id="可喜可贺可喜可贺">👏<strong>可喜可贺，可喜可贺</strong>👏</h2>
+<br/>
+<p>本人的小站开通了，感谢github爸爸提供了这么好用的部署，AND Gridea这么好用的开发工具，就是说咱一个随便搞搞，qcing（剑刃出鞘声）的一下，很快啊，网站就这么搭建好了。</p>
+<br/>
+<p>Markdown还不怎么会用，但总感觉吧网站诞生的第一天，不写些啥太没仪式感了，就摁写了这个Introduction出来。</p>
+<br/>
+<p>总之这个网站之后会用来分享自己学习到的知识啦~👻</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%8F%AF%E5%96%9C%E5%8F%AF%E8%B4%BA%E5%8F%AF%E5%96%9C%E5%8F%AF%E8%B4%BA">👏<strong>可喜可贺，可喜可贺</strong>👏</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://szlllll.github.io/A_ROOKIE//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://szlllll.github.io/A_ROOKIE/</id>
+    <title>A_ROOKIE</title>
+    <updated>2022-12-14T15:50:26.254Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://szlllll.github.io/A_ROOKIE/"/>
+    <link rel="self" href="https://szlllll.github.io/A_ROOKIE/atom.xml"/>
+    <subtitle>A ROOKIE&apos;s Learning Process</subtitle>
+    <logo>https://szlllll.github.io/A_ROOKIE/images/avatar.png</logo>
+    <icon>https://szlllll.github.io/A_ROOKIE/favicon.ico</icon>
+    <rights>All rights reserved 2022, A_ROOKIE</rights>
+    <entry>
+        <title type="html"><![CDATA[【CCSP】入门模拟Ⅰ：简单模拟]]></title>
+        <id>https://szlllll.github.io/A_ROOKIE/post/ccsp-ru-men-mo-ni-ijian-dan-mo-ni/</id>
+        <link href="https://szlllll.github.io/A_ROOKIE/post/ccsp-ru-men-mo-ni-ijian-dan-mo-ni/">
+        </link>
+        <updated>2022-12-14T15:00:44.000Z</updated>
+        <content type="html"><![CDATA[<p>BG：打算参加一下明年三月份的CCSP&amp;四月份的蓝桥杯，在准备毕设的同时刷些代码题。以及依旧是从简单的题目开始搞起，<s>那个找一点自信。</s> 😏</p>
+<h2 id="1-卡拉兹猜想">1、卡拉兹猜想</h2>
+<p>对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
+<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 n，简单地数一下，需要多少步（砍几下）才能得到 n=1？</p>
+<pre><code class="language-python">n = int(input())
+cnt = 0
+while n != 1:
+    cnt += 1
+    if n % 2 == 0:
+        n = n // 2
+        continue
+    else:
+        n = (3*n+1)//2
+print(cnt)
+</code></pre>
+<h3 id="改进">改进</h3>
+<p>整除2可用移位来做提高时间效率 n = n &gt;&gt; 2</p>
+<h2 id=""></h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Standard Library 're' Learning]]></title>
+        <id>https://szlllll.github.io/A_ROOKIE/post/python-standard-library-re-learning/</id>
+        <link href="https://szlllll.github.io/A_ROOKIE/post/python-standard-library-re-learning/">
+        </link>
+        <updated>2022-12-12T14:52:52.000Z</updated>
+        <content type="html"><![CDATA[<p>BG：今天帮好朋友黑🦆写python的大作业，要用到re这个库，用了一下午查查资料模模糊糊地整出来了。感觉re这个库还是挺牛的，学好了或许以后不管是做项目/算法题，在字符串这一块的处理或许能有一些奇技淫巧，就打算系统地来学一学。<br>
+(RE = Regular Expression 正则表达式)</p>
+<ul>
+<li>r'\n' contains '' and 'n'</li>
+<li>\n only contains \n</li>
+</ul>
+<h2 id="special-characters">Special Characters</h2>
+<ul>
+<li>.：匹配任意字符</li>
+<li>^：匹配字符串开始字符</li>
+<li>$：匹配字符串结束字符</li>
+<li>*：匹配任意次数前面那个字符。例如，ab*可以匹配a（b出现0次），可以匹配ab（b出现1次），也可以匹配abbb...bbb（b出现n次）</li>
+<li>+：匹配1或更多次数前面那个字符。例如ab+只能匹配ab及更多次数的b</li>
+<li>？：匹配0或1次前面那个字符。例如ab?只能匹配ab或者a</li>
+<li>*？、+？、？？：最后添加？表示non-greedy mode，例如[.*?]对于字符串[a] b [c]只会匹配一个[a]，而[.*]则会整个都匹配（最长）</li>
+<li></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introduction]]></title>
+        <id>https://szlllll.github.io/A_ROOKIE/post/introduction/</id>
+        <link href="https://szlllll.github.io/A_ROOKIE/post/introduction/">
+        </link>
+        <updated>2022-12-01T16:33:06.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="可喜可贺可喜可贺">👏<strong>可喜可贺，可喜可贺</strong>👏</h2>
+<br/>
+<p>本人的小站开通了，感谢github爸爸提供了这么好用的部署，AND Gridea这么好用的开发工具，就是说咱一个随便搞搞，qcing（剑刃出鞘声）的一下，很快啊，网站就这么搭建好了。</p>
+<br/>
+<p>Markdown还不怎么会用，但总感觉吧网站诞生的第一天，不写些啥太没仪式感了，就摁写了这个Introduction出来。</p>
+<br/>
+<p>总之这个网站之后会用来分享自己学习到的知识啦~👻</p>
+]]></content>
+    </entry>
+</feed>

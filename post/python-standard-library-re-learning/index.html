@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Python Standard Library &#39;re&#39; Learning | A_ROOKIE</title>
+<link rel="shortcut icon" href="https://szlllll.github.io/A_ROOKIE//favicon.ico?v=1671033023547">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://szlllll.github.io/A_ROOKIE//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Python Standard Library &#39;re&#39; Learning | A_ROOKIE - Atom Feed" href="https://szlllll.github.io/A_ROOKIE//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="BG：今天帮好朋友黑🦆写python的大作业，要用到re这个库，用了一下午查查资料模模糊糊地整出来了。感觉re这个库还是挺牛的，学好了或许以后不管是做项目/算法题，在字符串这一块的处理或许能有一些奇技淫巧，就打算系统地来学一学。
+(RE ..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://szlllll.github.io/A_ROOKIE/">
+  <img class="avatar" src="https://szlllll.github.io/A_ROOKIE//images/avatar.png?v=1671033023547" alt="">
+  </a>
+  <h1 class="site-title">
+    A_ROOKIE
+  </h1>
+  <p class="site-description">
+    A ROOKIE's Learning Process
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://szlllll.github.io/A_ROOKIE/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://szlllll.github.io/A_ROOKIE/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Python Standard Library &#39;re&#39; Learning
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-12-12
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>BG：今天帮好朋友黑🦆写python的大作业，要用到re这个库，用了一下午查查资料模模糊糊地整出来了。感觉re这个库还是挺牛的，学好了或许以后不管是做项目/算法题，在字符串这一块的处理或许能有一些奇技淫巧，就打算系统地来学一学。<br>
+(RE = Regular Expression 正则表达式)</p>
+<ul>
+<li>r'\n' contains '' and 'n'</li>
+<li>\n only contains \n</li>
+</ul>
+<h2 id="special-characters">Special Characters</h2>
+<ul>
+<li>.：匹配任意字符</li>
+<li>^：匹配字符串开始字符</li>
+<li>$：匹配字符串结束字符</li>
+<li>*：匹配任意次数前面那个字符。例如，ab*可以匹配a（b出现0次），可以匹配ab（b出现1次），也可以匹配abbb...bbb（b出现n次）</li>
+<li>+：匹配1或更多次数前面那个字符。例如ab+只能匹配ab及更多次数的b</li>
+<li>？：匹配0或1次前面那个字符。例如ab?只能匹配ab或者a</li>
+<li>*？、+？、？？：最后添加？表示non-greedy mode，例如[.*?]对于字符串[a] b [c]只会匹配一个[a]，而[.*]则会整个都匹配（最长）</li>
+<li></li>
+</ul>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#special-characters">Special Characters</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://szlllll.github.io/A_ROOKIE/post/introduction/">
+              <h3 class="post-title">
+                Introduction
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://szlllll.github.io/A_ROOKIE//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
